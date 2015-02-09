@@ -49,7 +49,7 @@ class JavaScriptHelperTest < ActionView::TestCase
     html = button_to_function( "Greet me!" ) do |page|
       page.replace_html 'header', "<h1>Greetings</h1>"
     end
-    assert_dom_equal %(<input type="button" onclick="Element.update(&quot;header&quot;, &quot;\\u003Ch1\\u003EGreetings\\u003C/h1\\u003E&quot;);;" value="Greet me!" />), html
+    assert_dom_equal %(<input type="button" value="Greet me!" onclick="Element.update(&quot;header&quot;, &quot;\\u003Ch1\\u003EGreetings\\u003C/h1\\u003E&quot;);;" />), html
   end
 
   def test_button_to_function_with_rjs_block_and_options

@@ -1,5 +1,6 @@
 require 'rails'
 require 'active_support'
+require 'responders'
 
 module PrototypeRails
   class Engine < Rails::Engine
